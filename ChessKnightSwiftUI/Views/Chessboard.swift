@@ -10,7 +10,6 @@ import UIKit
 
 enum PieceType: String{
     case knight
-    case flag
 }
 class Chessboard:UIView{
     var boardSize = 6

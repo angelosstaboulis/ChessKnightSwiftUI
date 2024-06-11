@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let chessBoardView = ChessboardSwiftUIView(chess: nil)
+    @State var results:[String]
     var body: some View {
         NavigationView {
             VStack{
@@ -18,8 +19,8 @@ struct ContentView: View {
                        
                 }
                 .padding()
-                Button {
-                    chessBoardView.printResults()
+                Button{
+                    results = chessBoardView.printResults()
                 } label: {
                     Text("Print Results").foregroundStyle(.white)
                 }.padding(45.0)
@@ -27,15 +28,22 @@ struct ContentView: View {
                         RoundedRectangle(cornerRadius: 22)
                             .frame(width:300,height:60)
                             .foregroundStyle(.blue)
-                    }
+                }
+
+       
                 Button {
                     chessBoardView.applyConfiguration()
+                    results.removeAll()
                 } label: {
                     Text("Reset").foregroundStyle(.white)
                 } .background {
                     RoundedRectangle(cornerRadius: 22)
                         .frame(width:300,height:60)
                         .foregroundStyle(.blue)
+                }.padding(35)
+                Text("List Results").frame(width:280,height:45,alignment: .leading)
+                List(results,id:\.self){item in
+                    Text(item)
                 }
                 
             } .navigationTitle("Chessboard")
@@ -47,5 +55,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(results: [])
 }

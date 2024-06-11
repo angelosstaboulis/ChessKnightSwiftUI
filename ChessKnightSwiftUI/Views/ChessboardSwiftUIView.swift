@@ -19,9 +19,9 @@ struct ChessboardSwiftUIView:UIViewRepresentable{
         knightInitialCell = ChessCell(x: 1, y: 1)
         targetInitialCell = ChessCell(x: 4, y: 3)
         knight = KnightChess(startingCell: knightInitialCell!)
-        game = Game(knight: knight!, solutionEngine: Engine(), targetCell: targetInitialCell!)
-       
-
+        game = Game(knight: knight!, engine: Engine(), targetCell: targetInitialCell!)
+        
+        
     }
     func makeCoordinator() -> Coordinator {
         return Coordinator(chess!, game: game!)
@@ -29,12 +29,15 @@ struct ChessboardSwiftUIView:UIViewRepresentable{
     func applyConfiguration(){
         chess?.applyConfiguration()
     }
-    func printResults(){
-        guard let game = self.game else{return}
+
+    func printResults()->[String]{
+        guard let game = self.game else{return []}
         let allPathList = game.findAllPaths()
+        var results:[String] = []
         for path in allPathList{
-            debugPrint("path=",path.notation)
+            results.append(path.notation)
         }
+        return results
     }
     func updateUIView(_ uiView: Chessboard, context: Context) {
         uiView.delegate = context.coordinator
@@ -53,7 +56,7 @@ struct ChessboardSwiftUIView:UIViewRepresentable{
             self.parent = parent
             self.game =  game
         }
-
+        
         func onKnightPositionChanged(newLocation: Coordinate) {
             let chessCell = ChessCell(x: newLocation.x, y: newLocation.y)
             game.changeKnightPosition(chessBoardCell: chessCell)

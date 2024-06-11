@@ -13,12 +13,12 @@ class Engine{
     var startingCell:ExtraCell!
     var validKnightMoves:[ChessCell] = []
     var data = Stack()
-  
+   // E4 <-  C3 <-  E2 <-  D4
     func dfs(startingCell:ExtraCell,targetCell:ChessCell){
         data.push(startingCell)
         while !data.isEmpty(){
             let topInStackCell = data.peek()
-            if !topInStackCell.hasMoreMoves(){
+            if !topInStackCell.hasMoreMoves()  {
                 if topInStackCell.isEqual(cellToBeCompared: targetCell){
                     satisfiedNewCells.append(topInStackCell)
                 }
@@ -36,6 +36,7 @@ class Engine{
             }
         }
     }
+
     func solve(knight : KnightChess, targetCell : ChessCell){
         
         startingCell = ExtraCell(previousCell: nil,

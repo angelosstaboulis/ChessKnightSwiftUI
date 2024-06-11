@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol ChessBoardDelegate:class{
+protocol ChessBoardDelegate:AnyObject{
     func onKnightPositionChanged(newLocation : Coordinate)
 }

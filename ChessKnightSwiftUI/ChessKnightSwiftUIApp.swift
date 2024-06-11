@@ -11,7 +11,7 @@ import SwiftUI
 struct ChessKnightSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(results: [])
         }
     }
 }
