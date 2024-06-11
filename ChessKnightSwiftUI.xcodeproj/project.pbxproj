@@ -24,7 +24,6 @@
 		D67378DD2AE710EA009FACF9 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67378DC2AE710EA009FACF9 /* Engine.swift */; };
 		D67378E22AE711B0009FACF9 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67378E12AE711B0009FACF9 /* Stack.swift */; };
 		D67378E42AE71228009FACF9 /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67378E32AE71228009FACF9 /* Knight.swift */; };
-		D685B4C52C1842FE00A446CF /* ShowResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685B4C42C1842FE00A446CF /* ShowResults.swift */; };
 		D68CC99E2AE7AB8B0057817B /* ExtraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CC99D2AE7AB8B0057817B /* ExtraCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +65,6 @@
 		D67378DC2AE710EA009FACF9 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		D67378E12AE711B0009FACF9 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		D67378E32AE71228009FACF9 /* Knight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
-		D685B4C42C1842FE00A446CF /* ShowResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowResults.swift; sourceTree = "<group>"; };
 		D68CC99D2AE7AB8B0057817B /* ExtraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,7 +158,6 @@
 				D67378CB2AE70AE2009FACF9 /* Chessboard.swift */,
 				D67378D02AE70BD6009FACF9 /* ChessboardDelegate.swift */,
 				D67378D42AE70CB3009FACF9 /* ChessboardSwiftUIView.swift */,
-				D685B4C42C1842FE00A446CF /* ShowResults.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,7 +327,6 @@
 				D67378DD2AE710EA009FACF9 /* Engine.swift in Sources */,
 				D673789F2AE70A5D009FACF9 /* ChessKnightSwiftUIApp.swift in Sources */,
 				D67378CF2AE70B2E009FACF9 /* Coordinate.swift in Sources */,
-				D685B4C52C1842FE00A446CF /* ShowResults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
